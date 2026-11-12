@@ -8,7 +8,7 @@ Meta Quest Developer Hub can only disable the sensor for 2/4/8 hours, and every 
 
 ## Why I made this
 
-When I used Virtual Desktop on my Quest Pro, taking the headset off or letting it go into standby made the image start **wobbling badly when I came back**. The only fix was to quit and restart Virtual Desktop. The cause is the headset going to sleep: the stream's frame timing drifts out of sync when it wakes up. So the cleanest fix is to **never let the headset sleep**, which means disabling the proximity sensor.
+When I used Virtual Desktop on my Quest Pro, taking the headset off or letting it go into standby made the image start **wobbling badly when I came back**. The only fix was to quit and restart Virtual Desktop. The likely cause is the headset going to sleep: the stream's frame timing drifts out of sync when it wakes up (details below). So I made this to try the most direct fix: **never let the headset sleep**, which means disabling the proximity sensor.
 
 Meta Quest Developer Hub (MQDH) does have a switch for this, but it doesn't really solve the problem:
 
@@ -41,7 +41,9 @@ Restarting VD fixes it because a fresh stream session re-syncs everything from s
 - Pin the headset to one Wi-Fi band (5 GHz or 6 GHz) so it doesn't switch bands on wake.
 - Keep the VD app and Streamer up to date.
 
-ProxLock attacks the root cause: if the headset never sleeps, the stream never has to recover from sleep.
+ProxLock was made to go after that root cause: if the headset never sleeps, the stream never has to recover from sleep.
+
+> **Test status:** ProxLock itself is verified (the sensor stays disabled after reboots). **Whether it actually fixes the VD wobble has not been tested yet.** Results will be added here.
 
 ## Supported devices
 
