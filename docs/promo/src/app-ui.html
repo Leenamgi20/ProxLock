@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- Re-draws the NoSleep headset window from real Quest captures, with the app's exact strings.
+     Open with ?lang=en|ko|ja|zh for the main window, or ?view=picker for the first-run language picker. -->
+<html><head><meta charset="utf-8"><title>NoSleep UI</title>
+<style>
+  html,body{margin:0;background:transparent}
+  body{font-family:Roboto,"Segoe UI","Malgun Gothic","Yu Gothic UI","Microsoft YaHei UI",sans-serif;-webkit-font-smoothing:antialiased}
+  .panel{width:380px;background:#202327;border-radius:26px;padding:22px 24px 26px;box-sizing:border-box;color:#fff}
+  .title{font-size:19px;font-weight:600;margin:0 0 22px 2px}
+  .langs{display:flex;gap:8px;justify-content:center;margin-bottom:24px}
+  .lb{background:#5b5d61;color:#fff;font-size:14px;padding:9px 10px;border-radius:4px;min-width:52px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.35)}
+  .lb.on{background:#3b3e42;color:#8a8d91;box-shadow:none}
+  .status{color:#b7babd;font-size:20px;line-height:1.38;margin:0 6px 26px;white-space:pre-line}
+  .btn{background:#5f6164;color:#fff;font-size:14.5px;text-align:center;padding:11px 8px;border-radius:4px;margin:0 6px 8px;box-shadow:0 1px 2px rgba(0,0,0,.35)}
+  .picker{width:360px;background:#202327;border-radius:26px;padding:22px 26px 14px;box-sizing:border-box;color:#fff}
+  .picker h1{font-size:18px;font-weight:600;margin:0 0 16px}
+  .picker div{font-size:16.5px;padding:13px 0}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+  const LANGS = ["English","한국어","日本語","中文"];
+  const IDX = {en:0, ko:1, ja:2, zh:3};
+  const TXT = {
+    off:  ["Sensor OFF (always awake)","센서 끄기 (항상 켜짐)","センサー OFF（常に起動）","关闭传感器（始终唤醒）"],
+    on:   ["Sensor ON (restore default)","센서 켜기 (원래대로)","センサー ON（元に戻す）","开启传感器（恢复默认）"],
+    stOn: ["NoSleep: ON\nSensor disabled, re-applied at boot and every 5 min",
+           "NoSleep: 켜짐\n센서가 꺼져 있고, 부팅할 때와 5분마다 다시 적용됩니다",
+           "NoSleep: ON\nセンサーは無効です。起動時と 5 分ごとに再適用されます",
+           "NoSleep：开启\n传感器已禁用，开机时及每 5 分钟重新应用"]
+  };
+  const q = new URLSearchParams(location.search);
+  const root = document.getElementById("root");
+  if (q.get("view") === "picker") {
+    root.innerHTML = '<div class="picker"><h1>Language / 언어 / 言語 / 语言</h1>' + LANGS.map(l => '<div>' + l + '</div>').join('') + '</div>';
+  } else {
+    const i = IDX[q.get("lang") || "en"];
+    root.innerHTML = '<div class="panel"><div class="title">NoSleep for Quest</div><div class="langs">' +
+      LANGS.map((l, k) => '<div class="lb' + (k === i ? ' on' : '') + '">' + l + '</div>').join('') +
+      '</div><div class="status">' + TXT.stOn[i] + '</div><div class="btn">' + TXT.off[i] + '</div><div class="btn">' + TXT.on[i] + '</div></div>';
+  }
+</script>
+</body></html>

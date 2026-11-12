@@ -46,6 +46,8 @@ Pick **one** of the two ways below.
 6. Put on the headset and allow USB debugging (same as step 5 of the PC install).
 7. Keep wearing the headset until the NoSleep window appears. When the phone shows **Done!**, you can unplug the cable.
 
+<img src="docs/images/phone-en.png" width="300" alt="NoSleep Installer on an Android phone">
+
 iPhone can't do this (iOS doesn't let apps control USB devices). iPhone users: use the PC install.
 
 ## Usage
@@ -53,6 +55,8 @@ iPhone can't do this (iOS doesn't let apps control USB devices). iPhone users: u
 - Nothing to do: it runs automatically at every boot.
 - To find the app: Library → top-right filter → **Unknown Sources** → NoSleep. The app asks for your language (English / 한국어 / 日本語 / 中文) the first time it opens.
 - **Sensor ON** button: sensor works normally again and auto-disabling stops. **Sensor OFF**: NoSleep is active again.
+
+<img src="docs/images/app-en.png" width="340" alt="NoSleep window in the headset">
 
 ## ⚠️ Important
 

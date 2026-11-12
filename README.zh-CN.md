@@ -46,6 +46,8 @@
 6. 戴上头显并允许 USB 调试（与电脑安装第 5 步相同）。
 7. 请一直戴着头显，直到出现 NoSleep 窗口。手机显示 **完成！** 后即可拔掉数据线。
 
+<img src="docs/images/phone-zh.png" width="300" alt="安卓手机上的 NoSleep Installer 界面">
+
 iPhone 无法安装（iOS 不允许应用控制 USB 设备）。iPhone 用户请使用电脑安装。
 
 ## 使用方法
@@ -53,6 +55,8 @@ iPhone 无法安装（iOS 不允许应用控制 USB 设备）。iPhone 用户请
 - 无需任何操作，每次开机都会自动运行。
 - 应用位置：应用库 → 右上角筛选 → **未知来源** → NoSleep
 - **开启传感器** 按钮：传感器恢复正常，并停止自动禁用。**关闭传感器**：重新启用 NoSleep。
+
+<img src="docs/images/app-zh.png" width="340" alt="头显中的 NoSleep 窗口">
 
 ## ⚠️ 注意事项
 

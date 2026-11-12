@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Re-draws the NoSleep Installer phone screen (v1.0.1 strings), based on real phone captures.
+     Open with ?lang=en|ko|ja|zh. -->
+<html><head><meta charset="utf-8"><title>NoSleep Installer UI</title>
+<style>
+  html,body{margin:0;background:#1c1b20}
+  body{width:360px;font-family:"Segoe UI","Malgun Gothic","Yu Gothic UI","Microsoft YaHei UI",sans-serif;-webkit-font-smoothing:antialiased}
+  .bar{background:#000;color:#fff;font-size:19px;font-weight:600;padding:18px 20px}
+  .body{padding:14px 14px 22px}
+  .langs{display:flex;gap:0}
+  .lb{flex:1;background:#2e2d33;color:#fff;font-size:13.5px;font-weight:600;text-align:center;padding:9px 0;border-radius:20px}
+  .lb.on{background:#26252a;color:#6c6b72}
+  h1{color:#a9a8ae;font-size:20px;font-weight:500;margin:16px 0 12px}
+  .steps{color:#bdbcc2;font-size:12.2px;line-height:1.55;white-space:pre-line}
+  .btn{background:#2e2d33;color:#fff;font-size:13.5px;font-weight:600;text-align:center;padding:9px 0;border-radius:20px;margin-top:4px}
+  .btn:first-of-type{margin-top:14px}
+</style></head>
+<body>
+<div class="bar">NoSleep Installer</div>
+<div class="body">
+  <div class="langs" id="langs"></div>
+  <h1>NoSleep Installer</h1>
+  <div class="steps" id="steps"></div>
+  <div class="btn" id="install"></div>
+  <div class="btn" id="remove"></div>
+</div>
+<script>
+  const LANGS = ["English","한국어","日本語","中文"];
+  const IDX = {en:0, ko:1, ja:2, zh:3};
+  const T = {
+    install: ["Install NoSleep","NoSleep 설치","NoSleep をインストール","安装 NoSleep"],
+    remove:  ["Remove NoSleep","NoSleep 삭제","NoSleep を削除","删除 NoSleep"],
+    steps: [
+      "1. Turn on Developer Mode for the Quest (Meta Horizon app → Devices → Headset settings → Developer Mode).\n\n2. Connect this phone to the Quest with a USB cable (USB-C to USB-C, or an OTG adapter).\n\n3. Tap [Install NoSleep] below.\n\n4. On the phone: when asked to allow access to the USB device, tap [OK].\n\n5. In the Quest: put on the headset. A notification \"Allow USB debugging?\" appears (if you don't see it, open the notifications panel). Select it, tick \"Always allow from this computer\" and tap [Allow].\n\n6. Keep wearing the headset until the NoSleep window appears. When this screen shows \"Done!\", you can unplug the cable.",
+      "1. Quest의 개발자 모드를 켜세요 (Meta Horizon 앱 → 기기 → 헤드셋 설정 → 개발자 모드).\n\n2. 이 폰과 Quest를 USB 케이블(C to C 또는 OTG 젠더)로 연결하세요.\n\n3. 아래 [NoSleep 설치] 버튼을 누르세요.\n\n4. 폰에서 USB 기기 접근을 허용할지 물으면 [확인]을 누르세요.\n\n5. Quest를 쓰세요. \"USB 디버깅을 허용하시겠습니까?\" 알림이 뜹니다 (안 보이면 알림창을 여세요). 알림을 선택한 뒤 \"이 컴퓨터에서 항상 허용\"을 체크하고 [허용]을 누르세요.\n\n6. NoSleep 창이 뜰 때까지 헤드셋을 쓰고 있어 주세요. 이 화면에 \"완료!\"가 나오면 케이블을 빼도 됩니다.",
+      "1. Quest の開発者モードをオンにしてください（Meta Horizon アプリ → デバイス → ヘッドセットの設定 → 開発者モード）。\n\n2. このスマホと Quest を USB ケーブル（C to C または OTG アダプタ）で接続してください。\n\n3. 下の［NoSleep をインストール］を押してください。\n\n4. スマホで USB デバイスへのアクセス許可を求められたら［OK］を押してください。\n\n5. Quest をかぶってください。「USB デバッグを許可しますか？」という通知が出ます（見えない場合は通知パネルを開いてください）。通知を選び、「このコンピューターを常に許可」にチェックして［許可］を押してください。\n\n6. NoSleep の画面が出るまでヘッドセットをかぶったままにしてください。この画面に「完了！」と出たらケーブルを外してかまいません。",
+      "1. 开启 Quest 的开发者模式（Meta Horizon 应用 → 设备 → 头显设置 → 开发者模式）。\n\n2. 用 USB 数据线（C to C 或 OTG 转接头）连接手机和 Quest。\n\n3. 点击下方的［安装 NoSleep］。\n\n4. 手机询问是否允许访问 USB 设备时，点击［确定］。\n\n5. 戴上 Quest，会出现\"允许 USB 调试吗？\"的通知（看不到时请打开通知面板）。选择该通知，勾选\"始终允许此计算机\"，然后点击［允许］。\n\n6. 请一直戴着头显，直到出现 NoSleep 窗口。本页面显示\"完成！\"后即可拔掉数据线。"
+    ]
+  };
+  const i = IDX[new URLSearchParams(location.search).get("lang") || "en"];
+  document.getElementById("langs").innerHTML = LANGS.map((l, k) => '<div class="lb' + (k === i ? ' on' : '') + '">' + l + '</div>').join('');
+  document.getElementById("steps").textContent = T.steps[i];
+  document.getElementById("install").textContent = T.install[i];
+  document.getElementById("remove").textContent = T.remove[i];
+</script>
+</body></html>
