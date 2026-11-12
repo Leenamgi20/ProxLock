@@ -21,7 +21,10 @@ Meta Quest Developer Hub 只能把传感器禁用 2/4/8 小时，而 MQDH、Side
 2. 从 [Releases](../../releases) 下载 `ProxLock-vX.Y.Z.zip` 并解压。
 3. 用 USB 数据线（需支持数据传输）把 Quest 连接到电脑。
 4. 双击 **`install.bat`**。如果头显里弹出提示，勾选 **"始终允许此计算机"** 并点击 **允许**。
-5. 完成，可以拔掉数据线了。
+5. 安装程序提示时，**请戴上头显一次**。出现 ProxLock 窗口即表示设置完成。Android 只会在开机时自动运行至少打开过一次的应用。
+6. 完成，可以拔掉数据线了。
+
+如果 Quest 系统更新后不再起作用，请提交 [Issue](../../issues)。
 
 如果电脑上没有 `adb`，安装程序会自动从 Google 官方服务器（`dl.google.com`）下载 Android platform-tools。使用即表示你同意 [Android SDK 条款](https://developer.android.com/studio/terms)。
 

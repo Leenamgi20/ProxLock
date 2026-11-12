@@ -21,7 +21,10 @@ Meta Quest Developer Hub can only disable the sensor for 2/4/8 hours, and every 
 2. Download `ProxLock-vX.Y.Z.zip` from [Releases](../../releases) and unzip it.
 3. Connect the Quest to the PC with a USB cable (data-capable).
 4. Double-click **`install.bat`**. If asked inside the headset, tick **"Always allow from this computer"** and press **Allow**.
-5. Done. You can unplug the cable.
+5. When the installer says so, **put on the headset once**. Setup is complete when the ProxLock window appears (Android only runs apps at boot after they have been opened once).
+6. Done. You can unplug the cable.
+
+If it stops working after a Quest system update, please open an [Issue](../../issues).
 
 If `adb` isn't installed, the installer automatically downloads Google's official Android platform-tools from `dl.google.com` (by using it you accept the [Android SDK terms](https://developer.android.com/studio/terms)).
 

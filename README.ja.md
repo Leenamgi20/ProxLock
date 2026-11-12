@@ -21,7 +21,10 @@ Meta Quest Developer Hub ではセンサーを 2/4/8 時間しか無効にでき
 2. [Releases](../../releases) から `ProxLock-vX.Y.Z.zip` をダウンロードして展開します。
 3. Quest を USB ケーブル（データ通信対応）で PC に接続します。
 4. **`install.bat`** をダブルクリックします。ヘッドセット内で確認が出たら **「このコンピューターを常に許可」** にチェックして **「許可」** を押します。
-5. 完了です。ケーブルを外してかまいません。
+5. インストーラーの案内が出たら、**ヘッドセットを一度かぶってください。** ProxLock の画面が表示されたら設定完了です。Android は一度起動したアプリしか起動時に自動実行しないためです。
+6. 完了です。ケーブルを外してかまいません。
+
+Quest のシステムアップデート後に動作しなくなった場合は、[Issue](../../issues) でお知らせください。
 
 `adb` がない場合は、Google 公式サーバー（`dl.google.com`）から Android platform-tools を自動でダウンロードします。使用することで [Android SDK 利用規約](https://developer.android.com/studio/terms) に同意したものとみなされます。
 

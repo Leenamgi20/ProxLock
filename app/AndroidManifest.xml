@@ -16,6 +16,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="com.proxlock.ARM"/>
             </intent-filter>
         </receiver>
         <receiver android:name=".AlarmReceiver" android:exported="false"/>

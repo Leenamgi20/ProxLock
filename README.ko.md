@@ -21,7 +21,10 @@ Meta Quest Developer Hub로는 센서를 2/4/8시간만 끌 수 있고, MQDH·Si
 2. [Releases](../../releases)에서 `ProxLock-vX.Y.Z.zip`을 받아 압축을 풉니다.
 3. Quest를 USB 케이블(데이터 전송이 되는 것)로 PC에 연결합니다.
 4. **`install.bat`**을 더블클릭합니다. 헤드셋 안에 창이 뜨면 **"이 컴퓨터에서 항상 허용"**을 체크하고 **허용**을 누릅니다.
-5. 끝입니다. 케이블을 빼도 됩니다.
+5. 설치 프로그램이 안내하면 **헤드셋을 한 번 써 주세요.** ProxLock 창이 뜨면 설정이 끝납니다. 안드로이드는 한 번 실행된 앱만 부팅할 때 자동으로 실행해 줍니다.
+6. 끝입니다. 케이블을 빼도 됩니다.
+
+Quest 시스템 업데이트 후에 작동하지 않으면 [Issue](../../issues)로 알려 주세요.
 
 PC에 `adb`가 없으면 설치 프로그램이 Google 공식 서버(`dl.google.com`)에서 Android platform-tools를 자동으로 받습니다. 사용 시 [Android SDK 약관](https://developer.android.com/studio/terms)에 동의하는 것으로 간주됩니다.
 
