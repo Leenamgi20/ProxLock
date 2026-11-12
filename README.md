@@ -38,7 +38,7 @@ iPhone can't do this (iOS doesn't let apps control USB devices). iPhone users: u
 ## Usage
 
 - Nothing to do: it runs automatically at every boot.
-- To find the app: Library → top-right filter → **Unknown Sources** → ProxLock.
+- To find the app: Library → top-right filter → **Unknown Sources** → ProxLock. The app asks for your language (English / 한국어 / 日本語 / 中文) the first time it opens.
 - **Sensor ON** button: sensor works normally again and auto-disabling stops. **Sensor OFF**: ProxLock is active again.
 
 ## ⚠️ Important

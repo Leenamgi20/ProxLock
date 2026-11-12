@@ -15,7 +15,7 @@ KS_PASS="${KS_PASS:-proxlock}"
 BT="$ANDROID_SDK/build-tools/$BUILD_TOOLS"; JAR="$ANDROID_SDK/platforms/android-32/android.jar"; J="$JAVA_HOME/bin"
 rm -rf build; mkdir -p build/classes build/dex dist
 "$BT/aapt2" link -o build/base.apk -I "$JAR" --manifest app/AndroidManifest.xml 2>/dev/null || "$BT/aapt2.exe" link -o build/base.apk -I "$JAR" --manifest app/AndroidManifest.xml
-"$J/javac" -source 8 -target 8 -nowarn -classpath "$JAR" -d build/classes app/src/com/proxlock/*.java
+"$J/javac" -source 8 -target 8 -nowarn -encoding UTF-8 -classpath "$JAR" -d build/classes app/src/com/proxlock/*.java
 "$J/java" -cp "$BT/lib/d8.jar" com.android.tools.r8.D8 --min-api 29 --lib "$JAR" --output build/dex $(find build/classes -name '*.class')
 cp build/base.apk build/unsigned.apk
 (cd build/dex && "$J/jar" uf ../unsigned.apk classes.dex)
