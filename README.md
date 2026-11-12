@@ -22,6 +22,27 @@ Meta Quest Developer Hub (MQDH) does have a switch for this, but it doesn't real
 
 ProxLock removes both limits: it turns the sensor off **automatically at every boot and re-applies it every 5 minutes**, so it behaves like taping over the sensor, with no PC needed after the first install.
 
+## Background: Virtual Desktop wobble after sleep
+
+**Symptom:** using Virtual Desktop (VD) on Quest, after taking the headset off and putting it back on, or after a short standby, the image keeps wobbling/juddering. It only goes away after quitting and restarting VD.
+
+**Likely causes** (general behavior of wireless PC streaming, not measured on every setup):
+
+1. **Frame pacing desync**: while the headset sleeps, its decoder and display loop stop, but the PC streamer keeps its old timing. After waking, frames arrive late or in bursts, and reprojection (timewarp) keeps correcting, which looks like wobble.
+2. **SSW/ASW gets stuck on**: a brief frame drop on wake can switch on Synchronous SpaceWarp, and it sometimes stays on, so you see half-rate interpolated frames with rippling edges.
+3. **Tracking origin reset**: the Quest may re-center the guardian/origin on wake, which briefly disturbs pose prediction (and can also shift SpaceSync-calibrated Lighthouse trackers).
+
+Restarting VD fixes it because a fresh stream session re-syncs everything from scratch.
+
+**Workarounds besides ProxLock:**
+
+- Use **Disconnect** in the VD menu and reconnect, instead of restarting VD. This is usually enough, and much faster.
+- In VD, set **SSW** to *Disabled* or *Automatic* (not *Always On*).
+- Pin the headset to one Wi-Fi band (5 GHz or 6 GHz) so it doesn't switch bands on wake.
+- Keep the VD app and Streamer up to date.
+
+ProxLock attacks the root cause: if the headset never sleeps, the stream never has to recover from sleep.
+
 ## Supported devices
 
 | Device | Status |
