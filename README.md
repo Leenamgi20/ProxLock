@@ -94,7 +94,7 @@ Then put on the headset so the app opens once.
 
 ## Why I made this
 
-When I used Virtual Desktop on my Quest Pro, taking the headset off or letting it go into standby made the image start **wobbling badly when I came back**. The only fix was to quit and restart Virtual Desktop. The likely cause is the headset going to sleep (see below), so I made this to try the most direct fix: **never let the headset sleep**, which means disabling the proximity sensor.
+Every time I took my Quest off for a moment, it went into standby, and I had to wait for it to wake up and reconnect when I put it back on. The fix is simple: **don't let the headset sleep**, which means disabling the proximity sensor. Many people do this by covering the sensor with tape, but I wanted the same result without tape.
 
 Meta Quest Developer Hub (MQDH) does have a switch for this, but it doesn't really solve the problem:
 
@@ -107,22 +107,6 @@ Meta Quest Developer Hub (MQDH) does have a switch for this, but it doesn't real
 - **It resets on every reboot.** After the headset restarts, the sensor is back on, so you have to plug into the PC and press Disable again each time. The same is true for SideQuest and the `adb` command.
 
 NoSleep removes both limits: it turns the sensor off automatically at every boot and re-applies it every 5 minutes. No PC is needed after the first install.
-
-## Virtual Desktop wobble after sleep
-
-**Symptom:** using Virtual Desktop (VD) on Quest, after taking the headset off and putting it back on, or after a short standby, the image keeps wobbling/juddering until VD is restarted.
-
-**Likely causes** (general behavior of wireless PC streaming, not measured on every setup):
-
-1. **Frame pacing desync**: while the headset sleeps, its decoder and display loop stop, but the PC streamer keeps its old timing. After waking, frames arrive late or in bursts, and reprojection (timewarp) keeps correcting, which looks like wobble.
-2. **SSW/ASW gets stuck on**: a brief frame drop on wake can switch on Synchronous SpaceWarp, and it sometimes stays on, giving half-rate interpolated frames with rippling edges.
-3. **Tracking origin reset**: the Quest may re-center the guardian/origin on wake, briefly disturbing pose prediction (and possibly shifting SpaceSync-calibrated Lighthouse trackers).
-
-Restarting VD fixes it because a fresh stream session re-syncs everything from scratch.
-
-**Workarounds besides NoSleep:** use **Disconnect** in the VD menu and reconnect instead of restarting VD; set **SSW** to *Disabled* or *Automatic*; pin the headset to one Wi-Fi band (5 GHz or 6 GHz); keep VD and the Streamer up to date.
-
-> **Test result (Quest Pro):** taking the headset off no longer causes the wobble, because the headset no longer goes to sleep. **But if you press the power button to put it into standby, the same wobble comes back after waking.** So NoSleep avoids the problem in everyday use, but it is not a fix for the underlying VD issue. After a power-button standby, use **Disconnect → reconnect** in VD.
 
 ## How it works / safety
 
