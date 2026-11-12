@@ -24,3 +24,16 @@ cp build/base.apk build/unsigned.apk
 "$J/java" -jar "$BT/lib/apksigner.jar" sign --ks "$KEYSTORE" --ks-pass "pass:$KS_PASS" --out dist/ProxLock.apk build/aligned.apk
 rm -f dist/ProxLock.apk.idsig
 echo "Built: $(pwd)/dist/ProxLock.apk"
+
+# ---- Android phone installer (embeds dist/ProxLock.apk) ----
+I=android-installer; rm -rf build/i; mkdir -p build/i/classes build/i/dex build/i/assets
+cp dist/ProxLock.apk build/i/assets/
+"$BT/aapt2" link -o build/i/base.apk -I "$JAR" --manifest $I/AndroidManifest.xml -A build/i/assets -0 apk 2>/dev/null || "$BT/aapt2.exe" link -o build/i/base.apk -I "$JAR" --manifest $I/AndroidManifest.xml -A build/i/assets -0 apk
+"$J/javac" -source 8 -target 8 -nowarn -encoding UTF-8 -classpath "$JAR" -d build/i/classes $(find $I/src -name '*.java')
+"$J/java" -cp "$BT/lib/d8.jar" com.android.tools.r8.D8 --min-api 24 --lib "$JAR" --output build/i/dex $(find build/i/classes -name '*.class')
+cp build/i/base.apk build/i/unsigned.apk
+(cd build/i/dex && "$J/jar" uf ../unsigned.apk classes.dex)
+"$BT/zipalign" -f 4 build/i/unsigned.apk build/i/aligned.apk 2>/dev/null || "$BT/zipalign.exe" -f 4 build/i/unsigned.apk build/i/aligned.apk
+"$J/java" -jar "$BT/lib/apksigner.jar" sign --ks "$KEYSTORE" --ks-pass "pass:$KS_PASS" --out dist/ProxLock-Installer.apk build/i/aligned.apk
+rm -f dist/ProxLock-Installer.apk.idsig
+echo "Built: $(pwd)/dist/ProxLock-Installer.apk"

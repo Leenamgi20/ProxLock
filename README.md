@@ -17,11 +17,23 @@ Keeps the Meta Quest proximity sensor **disabled permanently, even after reboots
 1. Turn on **Developer Mode**: Meta Horizon phone app → Devices → your headset → Headset settings → Developer Mode.
 2. Download `ProxLock-vX.Y.Z.zip` from [Releases](../../releases) and unzip it.
 3. Connect the Quest to the PC with a USB cable (data-capable).
-4. Double-click **`install.bat`**. If asked inside the headset, tick **"Always allow from this computer"** and press **Allow**.
-5. When the installer says so, **put on the headset once**. Setup is complete when the ProxLock window appears.
-6. Done. You can unplug the cable.
+4. Double-click **`install.bat`**.
+5. Put on the headset. Open the **"Allow USB debugging?"** notification (if you don't see it, open the notifications panel), tick **"Always allow from this computer"** and press **Allow**.
+6. Keep wearing the headset until the ProxLock window appears. When the installer says **Done!**, you can unplug the cable.
 
-No PC? See [Other install methods](#other-install-methods).
+## Install (Android phone, no PC)
+
+1. Turn on **Developer Mode** (same as above).
+2. On the phone, download **`ProxLock-Installer.apk`** from [Releases](../../releases) and open it.
+   - If the phone warns about installing apps from unknown sources, allow it for your browser/file app.
+   - If Google Play Protect says the app is unknown, tap **More details → Install anyway**.
+3. Open **ProxLock Installer** and choose your language.
+4. Connect the phone to the Quest with a USB cable (USB-C to USB-C, or an OTG adapter).
+5. Tap **Install ProxLock**. When the phone asks to allow access to the USB device, tap **OK**.
+6. Put on the headset and allow USB debugging (same as step 5 of the PC install).
+7. Keep wearing the headset until the ProxLock window appears. When the phone shows **Done!**, you can unplug the cable.
+
+iPhone can't do this (iOS doesn't let apps control USB devices). iPhone users: use the PC install.
 
 ## Usage
 
@@ -52,13 +64,6 @@ If it stops working (e.g. after a Quest system update), please open an [Issue](.
 *Background and technical details. You don't need any of this to use ProxLock.*
 
 ## Other install methods
-
-**Android phone (no PC, untested)**
-
-1. Enable Developer Mode (install step 1).
-2. Install a USB ADB app on the phone (e.g. *Bugjaeger*) and download `ProxLock.apk` to the phone.
-3. Connect phone ↔ Quest with a USB-C cable, allow USB debugging in the headset, and install the APK from the app.
-4. **Open ProxLock once in the headset** (Library → filter → *Unknown Sources*). This is required for it to run at boot.
 
 **Manual (adb)**
 
@@ -108,6 +113,7 @@ Restarting VD fixes it because a fresh stream session re-syncs everything from s
 - Android only delivers the boot signal to apps that have been opened once, which is why the installer asks you to put on the headset.
 - Only permission: `RECEIVE_BOOT_COMPLETED`. No internet, storage, or other permissions. About 10 KB, no background service.
 - Source is in `app/`. Build with `build.sh` (Android SDK + JDK, no Gradle).
+- The phone installer (`android-installer/`) talks ADB over USB using [AdbLib](https://github.com/cgutman/AdbLib) (BSD-3-Clause, license included). It has no internet permission and only installs/launches or removes ProxLock on the connected headset. ProxLock.apk is embedded in it.
 
 ## Disclaimer
 
