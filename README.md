@@ -99,7 +99,7 @@ Restarting VD fixes it because a fresh stream session re-syncs everything from s
 
 **Workarounds besides ProxLock:** use **Disconnect** in the VD menu and reconnect instead of restarting VD; set **SSW** to *Disabled* or *Automatic*; pin the headset to one Wi-Fi band (5 GHz or 6 GHz); keep VD and the Streamer up to date.
 
-> **Test status:** ProxLock itself is verified (the sensor stays disabled after reboots). **Whether it actually fixes the VD wobble has not been tested yet.** Results will be added here.
+> **Test result (Quest Pro):** taking the headset off no longer causes the wobble, because the headset no longer goes to sleep. **But if you press the power button to put it into standby, the same wobble comes back after waking.** So ProxLock avoids the problem in everyday use, but it is not a fix for the underlying VD issue. After a power-button standby, use **Disconnect → reconnect** in VD.
 
 ## How it works / safety
 
