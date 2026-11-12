@@ -1,4 +1,4 @@
-# ProxLock
+# NoSleep for Quest
 
 **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [中文](README.zh-CN.md)
 
@@ -18,47 +18,47 @@ Pick **one** of the two ways below.
 
 | | |
 |---|---|
-| 💻 **A. Windows PC** | [**ProxLock-v1.0.0.zip**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-v1.0.0.zip) |
-| 📱 **B. Android phone** (no PC) | [**ProxLock-Installer.apk**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-Installer.apk) |
+| 💻 **A. Windows PC** | [**NoSleep-for-Quest-v1.0.1.zip**](https://github.com/Leenamgi20/NoSleep-for-Quest/releases/latest/download/NoSleep-for-Quest-v1.0.1.zip) |
+| 📱 **B. Android phone** (no PC) | [**NoSleep-Installer.apk**](https://github.com/Leenamgi20/NoSleep-for-Quest/releases/latest/download/NoSleep-Installer.apk) |
 
 ### A. Windows PC (one click)
 
 1. Turn on **Developer Mode**: Meta Horizon phone app → Devices → your headset → Headset settings → Developer Mode.
-2. Download **ProxLock-v1.0.0.zip** from the table above and unzip it.
+2. Download **NoSleep-for-Quest-v1.0.1.zip** from the table above and unzip it.
 3. Connect the Quest to the PC with a USB cable (data-capable).
 4. Double-click **`install.bat`**.
 5. Put on the headset. Open the **"Allow USB debugging?"** notification (if you don't see it, open the notifications panel), tick **"Always allow from this computer"** and press **Allow**.
-6. Keep wearing the headset until the ProxLock window appears. When the installer says **Done!**, you can unplug the cable.
+6. Keep wearing the headset until the NoSleep window appears. When the installer says **Done!**, you can unplug the cable.
 
 ### B. Android phone (no PC)
 
 1. Turn on **Developer Mode** (same as above).
-2. On the phone, download **ProxLock-Installer.apk** from the table above and open it.
+2. On the phone, download **NoSleep-Installer.apk** from the table above and open it.
    - If the phone warns about installing apps from unknown sources, allow it for your browser/file app.
    - If Google Play Protect says the app is unknown, tap **More details → Install anyway**.
-3. Open **ProxLock Installer** and choose your language.
+3. Open **NoSleep Installer** and choose your language.
 4. Connect the phone to the Quest with a USB cable (USB-C to USB-C, or an OTG adapter).
-5. Tap **Install ProxLock**. When the phone asks to allow access to the USB device, tap **OK**.
+5. Tap **Install NoSleep**. When the phone asks to allow access to the USB device, tap **OK**.
 6. Put on the headset and allow USB debugging (same as step 5 of the PC install).
-7. Keep wearing the headset until the ProxLock window appears. When the phone shows **Done!**, you can unplug the cable.
+7. Keep wearing the headset until the NoSleep window appears. When the phone shows **Done!**, you can unplug the cable.
 
 iPhone can't do this (iOS doesn't let apps control USB devices). iPhone users: use the PC install.
 
 ## Usage
 
 - Nothing to do: it runs automatically at every boot.
-- To find the app: Library → top-right filter → **Unknown Sources** → ProxLock. The app asks for your language (English / 한국어 / 日本語 / 中文) the first time it opens.
-- **Sensor ON** button: sensor works normally again and auto-disabling stops. **Sensor OFF**: ProxLock is active again.
+- To find the app: Library → top-right filter → **Unknown Sources** → NoSleep. The app asks for your language (English / 한국어 / 日本語 / 中文) the first time it opens.
+- **Sensor ON** button: sensor works normally again and auto-disabling stops. **Sensor OFF**: NoSleep is active again.
 
 ## ⚠️ Important
 
 - The screen **stays on** when you take the headset off. Press the power button to sleep it, or the battery will drain.
 - **Never leave the lenses facing sunlight.** With the display on, this matters even more.
-- To turn the sensor back on, use the in-app **Sensor ON** button. If you use MQDH/SideQuest instead, ProxLock turns it off again within 5 minutes.
+- To turn the sensor back on, use the in-app **Sensor ON** button. If you use MQDH/SideQuest instead, NoSleep turns it off again within 5 minutes.
 
 ## Uninstall
 
-Double-click `uninstall.bat` (restores the sensor and removes the app), or uninstall ProxLock from Settings → Apps and reboot.
+Double-click `uninstall.bat` (restores the sensor and removes the app), or uninstall NoSleep from Settings → Apps and reboot.
 
 ## Problems?
 
@@ -70,14 +70,14 @@ If it stops working (e.g. after a Quest system update), please open an [Issue](.
 
 # Reference
 
-*Background and technical details. You don't need any of this to use ProxLock.*
+*Background and technical details. You don't need any of this to use NoSleep.*
 
 ## Other install methods
 
 **Manual (adb)**
 
 ```
-adb install -r ProxLock.apk
+adb install -r NoSleep.apk
 adb shell am start -n com.proxlock/.MainActivity
 ```
 Then put on the headset so the app opens once.
@@ -98,7 +98,7 @@ Meta Quest Developer Hub (MQDH) does have a switch for this, but it doesn't real
 
 - **It resets on every reboot.** After the headset restarts, the sensor is back on, so you have to plug into the PC and press Disable again each time. The same is true for SideQuest and the `adb` command.
 
-ProxLock removes both limits: it turns the sensor off automatically at every boot and re-applies it every 5 minutes. No PC is needed after the first install.
+NoSleep removes both limits: it turns the sensor off automatically at every boot and re-applies it every 5 minutes. No PC is needed after the first install.
 
 ## Virtual Desktop wobble after sleep
 
@@ -112,9 +112,9 @@ ProxLock removes both limits: it turns the sensor off automatically at every boo
 
 Restarting VD fixes it because a fresh stream session re-syncs everything from scratch.
 
-**Workarounds besides ProxLock:** use **Disconnect** in the VD menu and reconnect instead of restarting VD; set **SSW** to *Disabled* or *Automatic*; pin the headset to one Wi-Fi band (5 GHz or 6 GHz); keep VD and the Streamer up to date.
+**Workarounds besides NoSleep:** use **Disconnect** in the VD menu and reconnect instead of restarting VD; set **SSW** to *Disabled* or *Automatic*; pin the headset to one Wi-Fi band (5 GHz or 6 GHz); keep VD and the Streamer up to date.
 
-> **Test result (Quest Pro):** taking the headset off no longer causes the wobble, because the headset no longer goes to sleep. **But if you press the power button to put it into standby, the same wobble comes back after waking.** So ProxLock avoids the problem in everyday use, but it is not a fix for the underlying VD issue. After a power-button standby, use **Disconnect → reconnect** in VD.
+> **Test result (Quest Pro):** taking the headset off no longer causes the wobble, because the headset no longer goes to sleep. **But if you press the power button to put it into standby, the same wobble comes back after waking.** So NoSleep avoids the problem in everyday use, but it is not a fix for the underlying VD issue. After a power-button standby, use **Disconnect → reconnect** in VD.
 
 ## How it works / safety
 
@@ -122,7 +122,7 @@ Restarting VD fixes it because a fresh stream session re-syncs everything from s
 - Android only delivers the boot signal to apps that have been opened once, which is why the installer asks you to put on the headset.
 - Only permission: `RECEIVE_BOOT_COMPLETED`. No internet, storage, or other permissions. About 10 KB, no background service.
 - Source is in `app/`. Build with `build.sh` (Android SDK + JDK, no Gradle).
-- The phone installer (`android-installer/`) talks ADB over USB using [AdbLib](https://github.com/cgutman/AdbLib) (BSD-3-Clause, license included). It has no internet permission and only installs/launches or removes ProxLock on the connected headset. ProxLock.apk is embedded in it.
+- The phone installer (`android-installer/`) talks ADB over USB using [AdbLib](https://github.com/cgutman/AdbLib) (BSD-3-Clause, license included). It has no internet permission and only installs/launches or removes NoSleep on the connected headset. NoSleep.apk is embedded in it.
 
 ## Disclaimer
 

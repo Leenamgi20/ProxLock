@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-/** The only things this app does to the headset: install/launch ProxLock, or remove it. */
+/** The only things this app does to the headset: install/launch NoSleep, or remove it. */
 final class Quest {
     static final String PKG = "com.proxlock";
     private final AdbConnection adb;

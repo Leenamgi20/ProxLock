@@ -19,7 +19,7 @@ public class AdbConnection implements Closeable {
 	/** The underlying socket that this class uses to
 	 * communicate with the target device.
 	 */
-	private java.io.Closeable socket; // ProxLock: generalized from Socket to any transport
+	private java.io.Closeable socket; // NoSleep: generalized from Socket to any transport
 	
 	/** The last allocated local stream ID. The ID
 	 * chosen for the next stream will be this value + 1.
@@ -92,7 +92,7 @@ public class AdbConnection implements Closeable {
 	 * @return A new AdbConnection object.
 	 * @throws IOException If there is a socket error
 	 */
-	// ProxLock: create a connection over any stream pair (e.g. USB bulk endpoints)
+	// NoSleep: create a connection over any stream pair (e.g. USB bulk endpoints)
 	public static AdbConnection create(InputStream in, OutputStream out, java.io.Closeable transport, AdbCrypto crypto)
 	{
 		AdbConnection c = new AdbConnection();

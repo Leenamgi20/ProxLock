@@ -17,12 +17,12 @@ public class MainActivity extends Activity {
     private static final String[][] TXT = {
         /* off   */ {"Sensor OFF (always awake)", "센서 끄기 (항상 켜짐)", "センサー OFF（常に起動）", "关闭传感器（始终唤醒）"},
         /* on    */ {"Sensor ON (restore default)", "센서 켜기 (원래대로)", "センサー ON（元に戻す）", "开启传感器（恢复默认）"},
-        /* stOn  */ {"ProxLock: ON\nSensor disabled, re-applied at boot and every 5 min",
-                     "ProxLock: 켜짐\n센서가 꺼져 있고, 부팅할 때와 5분마다 다시 적용됩니다",
-                     "ProxLock: ON\nセンサーは無効です。起動時と 5 分ごとに再適用されます",
-                     "ProxLock：开启\n传感器已禁用，开机时及每 5 分钟重新应用"},
-        /* stOff */ {"ProxLock: OFF\nSensor works normally", "ProxLock: 꺼짐\n센서가 원래대로 작동합니다",
-                     "ProxLock: OFF\nセンサーは通常どおり動作します", "ProxLock：关闭\n传感器正常工作"},
+        /* stOn  */ {"NoSleep: ON\nSensor disabled, re-applied at boot and every 5 min",
+                     "NoSleep: 켜짐\n센서가 꺼져 있고, 부팅할 때와 5분마다 다시 적용됩니다",
+                     "NoSleep: ON\nセンサーは無効です。起動時と 5 分ごとに再適用されます",
+                     "NoSleep：开启\n传感器已禁用，开机时及每 5 分钟重新应用"},
+        /* stOff */ {"NoSleep: OFF\nSensor works normally", "NoSleep: 꺼짐\n센서가 원래대로 작동합니다",
+                     "NoSleep: OFF\nセンサーは通常どおり動作します", "NoSleep：关闭\n传感器正常工作"},
     };
     private static final int OFF = 0, ON = 1, ST_ON = 2, ST_OFF = 3;
 

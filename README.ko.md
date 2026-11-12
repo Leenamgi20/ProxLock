@@ -1,4 +1,4 @@
-# ProxLock
+# NoSleep for Quest
 
 [English](README.md) · **한국어** · [日本語](README.ja.md) · [中文](README.zh-CN.md)
 
@@ -18,47 +18,47 @@ Meta Quest의 근접 센서를 **재부팅해도 계속 꺼진 상태로 유지*
 
 | | |
 |---|---|
-| 💻 **A. Windows PC** | [**ProxLock-v1.0.0.zip**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-v1.0.0.zip) |
-| 📱 **B. 안드로이드 폰** (PC 없이) | [**ProxLock-Installer.apk**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-Installer.apk) |
+| 💻 **A. Windows PC** | [**NoSleep-for-Quest-v1.0.1.zip**](https://github.com/Leenamgi20/NoSleep-for-Quest/releases/latest/download/NoSleep-for-Quest-v1.0.1.zip) |
+| 📱 **B. 안드로이드 폰** (PC 없이) | [**NoSleep-Installer.apk**](https://github.com/Leenamgi20/NoSleep-for-Quest/releases/latest/download/NoSleep-Installer.apk) |
 
 ### A. Windows PC (원클릭)
 
 1. **개발자 모드 켜기**: 폰의 Meta Horizon 앱 → 기기 → 내 헤드셋 → 헤드셋 설정 → 개발자 모드
-2. 위 표에서 **ProxLock-v1.0.0.zip**을 받아 압축을 풉니다.
+2. 위 표에서 **NoSleep-for-Quest-v1.0.1.zip**을 받아 압축을 풉니다.
 3. Quest를 USB 케이블(데이터 전송이 되는 것)로 PC에 연결합니다.
 4. **`install.bat`**을 더블클릭합니다.
 5. 헤드셋을 쓰고 **"USB 디버깅을 허용하시겠습니까?"** 알림을 엽니다 (안 보이면 알림창을 여세요). **"이 컴퓨터에서 항상 허용"**을 체크하고 **허용**을 누릅니다.
-6. ProxLock 창이 뜰 때까지 헤드셋을 쓰고 있어 주세요. 설치 프로그램에 **완료!**가 나오면 케이블을 빼도 됩니다.
+6. NoSleep 창이 뜰 때까지 헤드셋을 쓰고 있어 주세요. 설치 프로그램에 **완료!**가 나오면 케이블을 빼도 됩니다.
 
 ### B. 안드로이드 폰 (PC 없이)
 
 1. **개발자 모드**를 켭니다 (위와 같음).
-2. 폰에서 위 표의 **ProxLock-Installer.apk**를 받아서 엽니다.
+2. 폰에서 위 표의 **NoSleep-Installer.apk**를 받아서 엽니다.
    - "출처를 알 수 없는 앱" 경고가 나오면 브라우저나 파일 앱에 설치 권한을 허용하세요.
    - Google Play 프로텍트가 알 수 없는 앱이라고 하면 **세부정보 더보기 → 무시하고 설치**를 누르세요.
-3. **ProxLock Installer**를 열고 언어를 고릅니다.
+3. **NoSleep Installer**를 열고 언어를 고릅니다.
 4. 폰과 Quest를 USB 케이블(C to C 또는 OTG 젠더)로 연결합니다.
-5. **ProxLock 설치**를 누릅니다. 폰에서 USB 기기 접근을 허용할지 물으면 **확인**을 누릅니다.
+5. **NoSleep 설치**를 누릅니다. 폰에서 USB 기기 접근을 허용할지 물으면 **확인**을 누릅니다.
 6. 헤드셋을 쓰고 USB 디버깅을 허용합니다 (PC 설치 5번과 같음).
-7. ProxLock 창이 뜰 때까지 헤드셋을 쓰고 있어 주세요. 폰에 **완료!**가 나오면 케이블을 빼도 됩니다.
+7. NoSleep 창이 뜰 때까지 헤드셋을 쓰고 있어 주세요. 폰에 **완료!**가 나오면 케이블을 빼도 됩니다.
 
 아이폰으로는 설치할 수 없습니다 (iOS는 앱이 USB 기기를 제어하지 못하게 막습니다). 아이폰 사용자는 PC 설치를 이용해 주세요.
 
 ## 사용법
 
 - 따로 할 일은 없습니다. 부팅할 때마다 자동으로 작동합니다.
-- 앱 위치: 라이브러리 → 오른쪽 위 필터 → **알 수 없는 출처** → ProxLock
-- **센서 켜기** 버튼: 센서가 원래대로 작동하고 자동으로 끄는 것도 멈춥니다. **센서 끄기**: ProxLock이 다시 작동합니다.
+- 앱 위치: 라이브러리 → 오른쪽 위 필터 → **알 수 없는 출처** → NoSleep
+- **센서 켜기** 버튼: 센서가 원래대로 작동하고 자동으로 끄는 것도 멈춥니다. **센서 끄기**: NoSleep이 다시 작동합니다.
 
 ## ⚠️ 주의
 
 - 헤드셋을 벗어도 **화면이 켜진 채로 있습니다.** 전원 버튼으로 화면을 끄지 않으면 배터리가 닳습니다.
 - **렌즈에 햇빛이 들지 않게 보관하세요.** 화면이 켜져 있으니 더 주의해야 합니다.
-- 센서를 다시 켜려면 앱의 **센서 켜기** 버튼을 쓰세요. MQDH나 SideQuest로 켜면 ProxLock이 5분 안에 다시 끕니다.
+- 센서를 다시 켜려면 앱의 **센서 켜기** 버튼을 쓰세요. MQDH나 SideQuest로 켜면 NoSleep이 5분 안에 다시 끕니다.
 
 ## 삭제
 
-`uninstall.bat`을 더블클릭하면 센서를 원래대로 돌리고 앱을 삭제합니다. 또는 헤드셋의 설정 → 앱에서 ProxLock을 삭제한 뒤 재부팅해도 됩니다.
+`uninstall.bat`을 더블클릭하면 센서를 원래대로 돌리고 앱을 삭제합니다. 또는 헤드셋의 설정 → 앱에서 NoSleep을 삭제한 뒤 재부팅해도 됩니다.
 
 ## 문제가 생기면
 
@@ -70,14 +70,14 @@ Quest 시스템 업데이트 후 작동하지 않는 등 문제가 생기면 [Is
 
 # 참고 자료
 
-*배경 설명과 기술적인 내용입니다. ProxLock을 쓰는 데 필요한 내용은 아닙니다.*
+*배경 설명과 기술적인 내용입니다. NoSleep을 쓰는 데 필요한 내용은 아닙니다.*
 
 ## 다른 설치 방법
 
 **수동 설치 (adb)**
 
 ```
-adb install -r ProxLock.apk
+adb install -r NoSleep.apk
 adb shell am start -n com.proxlock/.MainActivity
 ```
 그다음 헤드셋을 써서 앱이 한 번 열리게 해 주세요.
@@ -98,7 +98,7 @@ Meta Quest Developer Hub(MQDH)에도 센서를 끄는 버튼은 있지만, 문�
 
 - **재부팅하면 초기화됩니다.** 헤드셋을 다시 켜면 센서가 원래대로 켜져 있어서, 매번 PC에 연결해 Disable을 다시 눌러야 합니다. SideQuest나 `adb` 명령도 마찬가지입니다.
 
-ProxLock은 이 두 가지 제한을 모두 없앱니다. 부팅할 때마다 자동으로 센서를 끄고 5분마다 다시 적용하므로, 처음 설치한 뒤로는 PC가 필요 없습니다.
+NoSleep은 이 두 가지 제한을 모두 없앱니다. 부팅할 때마다 자동으로 센서를 끄고 5분마다 다시 적용하므로, 처음 설치한 뒤로는 PC가 필요 없습니다.
 
 ## 대기모드 후 Virtual Desktop 화면 일렁임
 
@@ -112,9 +112,9 @@ ProxLock은 이 두 가지 제한을 모두 없앱니다. 부팅할 때마다 �
 
 VD를 껐다 켜면 해결되는 이유는, 스트림 세션이 새로 만들어지면서 모든 타이밍이 처음부터 다시 맞춰지기 때문입니다.
 
-**ProxLock 말고 할 수 있는 방법:** VD를 완전히 끄는 대신 VD 메뉴에서 **Disconnect** 후 다시 연결하기, VD 설정에서 **SSW**를 *Disabled* 또는 *Automatic*으로 두기, 헤드셋을 Wi-Fi 대역 하나(5GHz 또는 6GHz)에만 고정하기, VD 앱과 Streamer를 최신 버전으로 유지하기.
+**NoSleep 말고 할 수 있는 방법:** VD를 완전히 끄는 대신 VD 메뉴에서 **Disconnect** 후 다시 연결하기, VD 설정에서 **SSW**를 *Disabled* 또는 *Automatic*으로 두기, 헤드셋을 Wi-Fi 대역 하나(5GHz 또는 6GHz)에만 고정하기, VD 앱과 Streamer를 최신 버전으로 유지하기.
 
-> **테스트 결과 (Quest Pro):** 헤드셋을 벗어도 대기모드로 넘어가지 않으므로 일렁임이 생기지 않았습니다. **하지만 전원 버튼을 눌러 대기모드로 넘어갔다 돌아오면 같은 일렁임이 다시 생깁니다.** 즉 ProxLock은 평소 사용할 때 문제를 피하게 해 주지만, VD 문제 자체의 근본적인 해결책은 아닙니다. 전원 버튼으로 대기모드에 들어갔다 돌아온 뒤에는 VD에서 **Disconnect → 다시 연결**하세요.
+> **테스트 결과 (Quest Pro):** 헤드셋을 벗어도 대기모드로 넘어가지 않으므로 일렁임이 생기지 않았습니다. **하지만 전원 버튼을 눌러 대기모드로 넘어갔다 돌아오면 같은 일렁임이 다시 생깁니다.** 즉 NoSleep은 평소 사용할 때 문제를 피하게 해 주지만, VD 문제 자체의 근본적인 해결책은 아닙니다. 전원 버튼으로 대기모드에 들어갔다 돌아온 뒤에는 VD에서 **Disconnect → 다시 연결**하세요.
 
 ## 작동 원리 / 안전성
 
@@ -122,7 +122,7 @@ VD를 껐다 켜면 해결되는 이유는, 스트림 세션이 새로 만들어
 - 안드로이드는 한 번 열린 적이 있는 앱에만 부팅 신호를 보내 줍니다. 그래서 설치 프로그램이 헤드셋을 한 번 써 달라고 안내합니다.
 - 권한은 `RECEIVE_BOOT_COMPLETED` 하나뿐입니다. 인터넷·저장소 등 다른 권한은 없습니다. 용량은 약 10KB이고, 백그라운드에 상주하지 않습니다.
 - 소스는 `app/` 폴더에 있습니다. `build.sh`로 빌드합니다 (Android SDK + JDK, Gradle 불필요).
-- 폰 설치 앱(`android-installer/`)은 [AdbLib](https://github.com/cgutman/AdbLib)(BSD-3-Clause, 라이선스 포함)로 USB를 통해 ADB 통신을 합니다. 인터넷 권한이 없고, 연결된 헤드셋에 ProxLock을 설치·실행하거나 삭제하는 일만 합니다. ProxLock.apk가 앱 안에 들어 있습니다.
+- 폰 설치 앱(`android-installer/`)은 [AdbLib](https://github.com/cgutman/AdbLib)(BSD-3-Clause, 라이선스 포함)로 USB를 통해 ADB 통신을 합니다. 인터넷 권한이 없고, 연결된 헤드셋에 NoSleep을 설치·실행하거나 삭제하는 일만 합니다. NoSleep.apk가 앱 안에 들어 있습니다.
 
 ## 면책
 

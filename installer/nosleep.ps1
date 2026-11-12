@@ -1,4 +1,4 @@
-﻿# ProxLock one-click installer / uninstaller for Meta Quest (Windows)
+﻿# NoSleep one-click installer / uninstaller for Meta Quest (Windows)
 param([ValidateSet('install','uninstall')][string]$Mode = 'install')
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [Text.Encoding]::UTF8
@@ -13,41 +13,41 @@ $M = @{
    auth='Put on the headset and press "Allow" (tick "Always allow from this computer") on the USB debugging prompt.';
    none='No headset found. Check: Developer Mode is ON, the cable supports data, then run again.';
    multi='More than one device is connected. Leave only the Quest connected and run again.';
-   wear='Now put on the headset once. When the ProxLock window appears, setup is complete (you can close it). Waiting up to 3 minutes...'; timeout='The app was not opened. Open ProxLock once in the headset: Library > Unknown Sources > ProxLock.';
-   inst='Installing ProxLock...'; ok='Done! The proximity sensor is now disabled and will stay disabled after every reboot.';
+   wear='Now put on the headset once. When the NoSleep window appears, setup is complete (you can close it). Waiting up to 3 minutes...'; timeout='The app was not opened. Open NoSleep once in the headset: Library > Unknown Sources > NoSleep.';
+   inst='Installing NoSleep...'; ok='Done! The proximity sensor is now disabled and will stay disabled after every reboot.';
    warn='Note: the screen will stay on when you take the headset off. Press the power button to sleep it, and keep the lenses out of sunlight.';
    verifyfail='Installed, but the sensor state could not be confirmed. Reboot the headset and check that the screen stays on when removed.';
-   unok='ProxLock removed. The proximity sensor works normally again.'; notinst='ProxLock is not installed.'; fail='Failed:' }
+   unok='NoSleep removed. The proximity sensor works normally again.'; notinst='NoSleep is not installed.'; fail='Failed:' }
  ko = @{ find='adb 찾는 중...'; dl='adb가 없어서 Google(dl.google.com)에서 Android platform-tools를 다운로드합니다...';
    wait='Quest를 USB 케이블로 PC에 연결하세요. 헤드셋을 기다리는 중...';
    auth='헤드셋을 쓰고 USB 디버깅 허용 창에서 "이 컴퓨터에서 항상 허용"을 체크한 뒤 "허용"을 누르세요.';
    none='헤드셋을 찾지 못했습니다. 개발자 모드가 켜져 있는지, 데이터 전송이 되는 케이블인지 확인 후 다시 실행하세요.';
    multi='기기가 여러 대 연결되어 있습니다. Quest만 연결한 뒤 다시 실행하세요.';
-   wear='이제 헤드셋을 한 번 써 주세요. ProxLock 창이 뜨면 설정이 끝납니다 (창은 닫아도 됩니다). 최대 3분 기다립니다...'; timeout='앱이 열리지 않았습니다. 헤드셋에서 라이브러리 > 알 수 없는 출처 > ProxLock을 한 번 실행해 주세요.';
-   inst='ProxLock 설치 중...'; ok='완료! 근접 센서가 꺼졌고, 재부팅해도 계속 꺼진 상태로 유지됩니다.';
+   wear='이제 헤드셋을 한 번 써 주세요. NoSleep 창이 뜨면 설정이 끝납니다 (창은 닫아도 됩니다). 최대 3분 기다립니다...'; timeout='앱이 열리지 않았습니다. 헤드셋에서 라이브러리 > 알 수 없는 출처 > NoSleep을 한 번 실행해 주세요.';
+   inst='NoSleep 설치 중...'; ok='완료! 근접 센서가 꺼졌고, 재부팅해도 계속 꺼진 상태로 유지됩니다.';
    warn='주의: 헤드셋을 벗어도 화면이 켜져 있습니다. 전원 버튼으로 화면을 끄고, 렌즈에 햇빛이 들지 않게 보관하세요.';
    verifyfail='설치는 됐지만 센서 상태를 확인하지 못했습니다. 헤드셋을 재부팅한 뒤 벗었을 때 화면이 켜져 있는지 확인하세요.';
-   unok='ProxLock을 삭제했습니다. 근접 센서가 원래대로 작동합니다.'; notinst='ProxLock이 설치되어 있지 않습니다.'; fail='실패:' }
+   unok='NoSleep을 삭제했습니다. 근접 센서가 원래대로 작동합니다.'; notinst='NoSleep이 설치되어 있지 않습니다.'; fail='실패:' }
  ja = @{ find='adb を検索中...'; dl='adb が見つかりません。Google (dl.google.com) から Android platform-tools をダウンロードします...';
    wait='Quest を USB ケーブルで PC に接続してください。ヘッドセットを待っています...';
    auth='ヘッドセットをかぶり、USB デバッグの確認画面で「このコンピューターを常に許可」にチェックして「許可」を押してください。';
    none='ヘッドセットが見つかりません。開発者モードがオンか、データ通信対応ケーブルかを確認して再実行してください。';
    multi='複数のデバイスが接続されています。Quest だけを接続して再実行してください。';
-   wear='ヘッドセットを一度かぶってください。ProxLock の画面が表示されたら設定完了です（閉じてかまいません）。最大 3 分待ちます...'; timeout='アプリが起動しませんでした。ヘッドセットでライブラリ > 提供元不明 > ProxLock を一度起動してください。';
-   inst='ProxLock をインストール中...'; ok='完了！近接センサーが無効になり、再起動後も無効のまま維持されます。';
+   wear='ヘッドセットを一度かぶってください。NoSleep の画面が表示されたら設定完了です（閉じてかまいません）。最大 3 分待ちます...'; timeout='アプリが起動しませんでした。ヘッドセットでライブラリ > 提供元不明 > NoSleep を一度起動してください。';
+   inst='NoSleep をインストール中...'; ok='完了！近接センサーが無効になり、再起動後も無効のまま維持されます。';
    warn='注意: ヘッドセットを外しても画面は点いたままです。電源ボタンでスリープし、レンズに直射日光が当たらないよう保管してください。';
    verifyfail='インストールは完了しましたが、センサーの状態を確認できませんでした。再起動後、外したときに画面が点いたままか確認してください。';
-   unok='ProxLock を削除しました。近接センサーは通常どおり動作します。'; notinst='ProxLock はインストールされていません。'; fail='失敗:' }
+   unok='NoSleep を削除しました。近接センサーは通常どおり動作します。'; notinst='NoSleep はインストールされていません。'; fail='失敗:' }
  zh = @{ find='正在查找 adb...'; dl='未找到 adb，正在从 Google (dl.google.com) 下载 Android platform-tools...';
    wait='请用 USB 数据线将 Quest 连接到电脑。正在等待头显...';
    auth='请戴上头显，在 USB 调试提示中勾选"始终允许此计算机"并点击"允许"。';
    none='未找到头显。请确认已开启开发者模式、数据线支持数据传输，然后重新运行。';
    multi='连接了多台设备。请只连接 Quest 后重新运行。';
-   wear='现在请戴上头显一次。出现 ProxLock 窗口即表示设置完成（可以关闭）。最多等待 3 分钟...'; timeout='应用未被打开。请在头显中打开一次：应用库 > 未知来源 > ProxLock。';
-   inst='正在安装 ProxLock...'; ok='完成！距离传感器已禁用，重启后也会保持禁用。';
+   wear='现在请戴上头显一次。出现 NoSleep 窗口即表示设置完成（可以关闭）。最多等待 3 分钟...'; timeout='应用未被打开。请在头显中打开一次：应用库 > 未知来源 > NoSleep。';
+   inst='正在安装 NoSleep...'; ok='完成！距离传感器已禁用，重启后也会保持禁用。';
    warn='注意：摘下头显后屏幕会保持点亮。请按电源键让其休眠，并避免镜片受阳光直射。';
    verifyfail='已安装，但无法确认传感器状态。请重启头显，并确认摘下后屏幕保持点亮。';
-   unok='已删除 ProxLock，距离传感器恢复正常。'; notinst='未安装 ProxLock。'; fail='失败：' }
+   unok='已删除 NoSleep，距离传感器恢复正常。'; notinst='未安装 NoSleep。'; fail='失败：' }
 }[$lang]
 function Say($k, $c = 'White') { Write-Host $M[$k] -ForegroundColor $c }
 
@@ -96,7 +96,7 @@ try {
   }
 
   Say inst
-  $apk = Join-Path $Here 'ProxLock.apk'
+  $apk = Join-Path $Here 'NoSleep.apk'
   $out = & $adb -s $serial install -r $apk 2>&1 | Out-String
   if ($out -notmatch 'Success') { throw $out.Trim() }
   # Wake the headset first: in standby the app cannot be launched.
