@@ -1,0 +1,7 @@
+build/
+dist/
+*.keystore
+*.jks
+*.idsig
+installer/platform-tools/
+*.zip
