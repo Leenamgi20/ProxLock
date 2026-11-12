@@ -30,6 +30,8 @@ Pick **one** of the two ways below.
 5. Put on the headset. Open the **"Allow USB debugging?"** notification (if you don't see it, open the notifications panel), tick **"Always allow from this computer"** and press **Allow**.
 6. Keep wearing the headset until the NoSleep window appears. When the installer says **Done!**, you can unplug the cable.
 
+![Installer window after a successful install](docs/images/pc-installer-en.png)
+
 ### B. Android phone (no PC)
 
 1. Turn on **Developer Mode** (same as above).
