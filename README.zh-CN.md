@@ -6,7 +6,21 @@
 
 Meta Quest Developer Hub 只能把传感器禁用 2/4/8 小时，而 MQDH、SideQuest、`adb` 等任何方法在重启后都会失效。ProxLock 是一个运行在头显里的小应用，每次开机以及每隔 5 分钟都会重新应用这个设置。
 
-**为什么需要？** 摘下头显或从待机中唤醒后，Virtual Desktop 等 PC 串流应用可能出现画面抖动，只有重启应用才能恢复。让头显不进入休眠就能避免这个问题。
+## 开发原因
+
+我在 Quest Pro 上使用 Virtual Desktop 时，只要摘下头显再戴上，或者短暂进入待机后再回来，**画面就会严重抖动**，只有退出并重新打开 Virtual Desktop 才能解决。原因是头显进入了休眠：从休眠中唤醒后，串流的帧时序会错乱。所以最干净的解决办法就是**让头显永远不休眠**，也就是禁用距离传感器。
+
+Meta Quest Developer Hub（MQDH）里虽然有禁用传感器的开关，但并不能真正解决问题：
+
+![MQDH 的 Device actions：Proximity Sensor 显示 "Enabled"，旁边有 Disable 按钮](docs/images/mqdh-proximity-sensor.png)
+
+- **有时间限制。** 点击 *Disable* 后只能选择 **2 小时 / 4 小时 / 8 小时**，没有"永久禁用"选项。即使不重启，**时间一到设置也会自动失效**，头显又会开始休眠。
+
+  ![MQDH 的 Disable 菜单：For 2 Hours / For 4 Hours / For 8 Hours](docs/images/mqdh-time-limit.png)
+
+- **重启后会重置。** 头显重启后传感器会恢复开启，每次都得连上电脑重新点 Disable。SideQuest 和 `adb` 命令也一样。
+
+ProxLock 解决了这两个限制：它会在**每次开机时自动禁用传感器，并每 5 分钟重新应用一次**，效果就像用胶带遮住传感器一样。首次安装之后就不再需要电脑。
 
 ## 支持的设备
 

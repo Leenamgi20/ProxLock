@@ -6,7 +6,21 @@ Keeps the Meta Quest proximity sensor **disabled permanently, even after reboots
 
 Meta Quest Developer Hub can only disable the sensor for 2/4/8 hours, and every method (MQDH, SideQuest, `adb`) resets on reboot. ProxLock is a tiny on-headset app that re-applies the setting at every boot and every 5 minutes.
 
-**Why?** When the headset sleeps (taken off, standby) and wakes up, PC streaming apps like Virtual Desktop can start juddering/wobbling until restarted. Keeping the headset awake avoids it.
+## Why I made this
+
+When I used Virtual Desktop on my Quest Pro, taking the headset off or letting it go into standby made the image start **wobbling badly when I came back**. The only fix was to quit and restart Virtual Desktop. The cause is the headset going to sleep: the stream's frame timing drifts out of sync when it wakes up. So the cleanest fix is to **never let the headset sleep**, which means disabling the proximity sensor.
+
+Meta Quest Developer Hub (MQDH) does have a switch for this, but it doesn't really solve the problem:
+
+![MQDH Device actions: Proximity Sensor "Enabled" with a Disable button](docs/images/mqdh-proximity-sensor.png)
+
+- **It is time-limited.** Pressing *Disable* only offers **2, 4 or 8 hours**. There is no "forever" option. Even without a reboot, the setting **turns itself off when the time runs out** and the headset starts sleeping again.
+
+  ![MQDH Disable menu: For 2 Hours / For 4 Hours / For 8 Hours](docs/images/mqdh-time-limit.png)
+
+- **It resets on every reboot.** After the headset restarts, the sensor is back on, so you have to plug into the PC and press Disable again each time. The same is true for SideQuest and the `adb` command.
+
+ProxLock removes both limits: it turns the sensor off **automatically at every boot and re-applies it every 5 minutes**, so it behaves like taping over the sensor, with no PC needed after the first install.
 
 ## Supported devices
 

@@ -6,7 +6,21 @@ Meta Quest의 근접 센서를 **재부팅해도 계속 꺼진 상태로 유지*
 
 Meta Quest Developer Hub로는 센서를 2/4/8시간만 끌 수 있고, MQDH·SideQuest·`adb` 등 어떤 방법이든 재부팅하면 원래대로 돌아옵니다. ProxLock은 헤드셋 안에서 돌아가는 아주 작은 앱으로, 부팅할 때마다 그리고 5분마다 설정을 다시 적용합니다.
 
-**왜 필요한가요?** 헤드셋을 벗거나 대기모드로 들어갔다가 돌아오면 Virtual Desktop 같은 PC 스트리밍 앱의 화면이 일렁이고, 앱을 다시 켜야 해결되는 경우가 있습니다. 헤드셋이 잠들지 않게 하면 이 문제를 피할 수 있습니다.
+## 만든 이유
+
+Quest Pro로 Virtual Desktop을 쓰다가 헤드셋을 벗었다 다시 쓰거나 잠시 대기모드에 들어갔다 돌아오면 **화면 일렁임이 심해졌습니다.** Virtual Desktop을 껐다 켜야만 해결됐습니다. 원인은 헤드셋이 잠드는 것입니다. 잠들었다 깨어나면 스트리밍의 프레임 타이밍이 어긋납니다. 그래서 가장 깔끔한 해결책은 **헤드셋이 아예 잠들지 않게**, 즉 근접 센서를 끄는 것입니다.
+
+Meta Quest Developer Hub(MQDH)에도 센서를 끄는 버튼은 있지만, 문제를 제대로 해결해 주지는 못합니다.
+
+![MQDH Device actions: Proximity Sensor가 "Enabled" 상태이고 Disable 버튼이 있음](docs/images/mqdh-proximity-sensor.png)
+
+- **시간 제한이 있습니다.** *Disable*을 누르면 **2시간 / 4시간 / 8시간** 중에서만 고를 수 있고, "계속 끄기"는 없습니다. 재부팅하지 않아도 **시간이 지나면 설정이 저절로 풀려** 헤드셋이 다시 잠들기 시작합니다.
+
+  ![MQDH Disable 메뉴: For 2 Hours / For 4 Hours / For 8 Hours](docs/images/mqdh-time-limit.png)
+
+- **재부팅하면 초기화됩니다.** 헤드셋을 다시 켜면 센서가 원래대로 켜져 있어서, 매번 PC에 연결해 Disable을 다시 눌러야 합니다. SideQuest나 `adb` 명령도 마찬가지입니다.
+
+ProxLock은 이 두 가지 제한을 모두 없앱니다. **부팅할 때마다 자동으로 센서를 끄고 5분마다 다시 적용**하므로, 센서를 테이프로 막은 것처럼 작동합니다. 처음 설치한 뒤로는 PC가 필요 없습니다.
 
 ## 지원 기기
 
