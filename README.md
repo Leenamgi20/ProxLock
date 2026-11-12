@@ -9,7 +9,8 @@ Keeps the Meta Quest proximity sensor **disabled permanently, even after reboots
 | Device | Status |
 |---|---|
 | Quest Pro | ✅ Tested (incl. reboot) |
-| Quest 3 / 3S / 2 | Should work (same system command), not yet tested. Reports welcome |
+| Quest 2 | ✅ Tested (incl. reboot) |
+| Quest 3 / 3S | Should work (same system command), not yet tested. Reports welcome |
 
 ## Install (Windows PC, one click)
 
