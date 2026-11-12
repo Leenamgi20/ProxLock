@@ -12,19 +12,28 @@ Keeps the Meta Quest proximity sensor **disabled permanently, even after reboots
 | Quest 2 | ✅ Tested (incl. reboot) |
 | Quest 3 / 3S | Should work (same system command), not yet tested. Reports welcome |
 
-## Install (Windows PC, one click)
+## Install
+
+Pick **one** of the two ways below.
+
+| | |
+|---|---|
+| 💻 **A. Windows PC** | [**ProxLock-v1.0.0.zip**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-v1.0.0.zip) |
+| 📱 **B. Android phone** (no PC) | [**ProxLock-Installer.apk**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-Installer.apk) |
+
+### A. Windows PC (one click)
 
 1. Turn on **Developer Mode**: Meta Horizon phone app → Devices → your headset → Headset settings → Developer Mode.
-2. Download `ProxLock-vX.Y.Z.zip` from [Releases](../../releases) and unzip it.
+2. Download **ProxLock-v1.0.0.zip** from the table above and unzip it.
 3. Connect the Quest to the PC with a USB cable (data-capable).
 4. Double-click **`install.bat`**.
 5. Put on the headset. Open the **"Allow USB debugging?"** notification (if you don't see it, open the notifications panel), tick **"Always allow from this computer"** and press **Allow**.
 6. Keep wearing the headset until the ProxLock window appears. When the installer says **Done!**, you can unplug the cable.
 
-## Install (Android phone, no PC)
+### B. Android phone (no PC)
 
 1. Turn on **Developer Mode** (same as above).
-2. On the phone, download **`ProxLock-Installer.apk`** from [Releases](../../releases) and open it.
+2. On the phone, download **ProxLock-Installer.apk** from the table above and open it.
    - If the phone warns about installing apps from unknown sources, allow it for your browser/file app.
    - If Google Play Protect says the app is unknown, tap **More details → Install anyway**.
 3. Open **ProxLock Installer** and choose your language.

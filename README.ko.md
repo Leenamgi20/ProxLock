@@ -12,19 +12,28 @@ Meta Quest의 근접 센서를 **재부팅해도 계속 꺼진 상태로 유지*
 | Quest 2 | ✅ 테스트 완료 (재부팅 포함) |
 | Quest 3 / 3S | 같은 시스템 명령을 쓰므로 작동할 것으로 예상되지만 아직 미검증입니다. 테스트 결과를 알려 주세요 |
 
-## 설치 (Windows PC, 원클릭)
+## 설치
+
+아래 두 가지 방법 중 **하나**를 고르세요.
+
+| | |
+|---|---|
+| 💻 **A. Windows PC** | [**ProxLock-v1.0.0.zip**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-v1.0.0.zip) |
+| 📱 **B. 안드로이드 폰** (PC 없이) | [**ProxLock-Installer.apk**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-Installer.apk) |
+
+### A. Windows PC (원클릭)
 
 1. **개발자 모드 켜기**: 폰의 Meta Horizon 앱 → 기기 → 내 헤드셋 → 헤드셋 설정 → 개발자 모드
-2. [Releases](../../releases)에서 `ProxLock-vX.Y.Z.zip`을 받아 압축을 풉니다.
+2. 위 표에서 **ProxLock-v1.0.0.zip**을 받아 압축을 풉니다.
 3. Quest를 USB 케이블(데이터 전송이 되는 것)로 PC에 연결합니다.
 4. **`install.bat`**을 더블클릭합니다.
 5. 헤드셋을 쓰고 **"USB 디버깅을 허용하시겠습니까?"** 알림을 엽니다 (안 보이면 알림창을 여세요). **"이 컴퓨터에서 항상 허용"**을 체크하고 **허용**을 누릅니다.
 6. ProxLock 창이 뜰 때까지 헤드셋을 쓰고 있어 주세요. 설치 프로그램에 **완료!**가 나오면 케이블을 빼도 됩니다.
 
-## 설치 (안드로이드 폰, PC 없이)
+### B. 안드로이드 폰 (PC 없이)
 
 1. **개발자 모드**를 켭니다 (위와 같음).
-2. 폰에서 [Releases](../../releases)의 **`ProxLock-Installer.apk`**를 받아서 엽니다.
+2. 폰에서 위 표의 **ProxLock-Installer.apk**를 받아서 엽니다.
    - "출처를 알 수 없는 앱" 경고가 나오면 브라우저나 파일 앱에 설치 권한을 허용하세요.
    - Google Play 프로텍트가 알 수 없는 앱이라고 하면 **세부정보 더보기 → 무시하고 설치**를 누르세요.
 3. **ProxLock Installer**를 열고 언어를 고릅니다.

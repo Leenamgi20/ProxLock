@@ -12,19 +12,28 @@
 | Quest 2 | ✅ 已测试（包括重启） |
 | Quest 3 / 3S | 使用相同的系统命令，应该可以运行，但尚未测试，欢迎反馈 |
 
-## 安装（Windows 电脑，一键安装）
+## 安装
+
+请从下面两种方法中**任选一种**。
+
+| | |
+|---|---|
+| 💻 **A. Windows 电脑** | [**ProxLock-v1.0.0.zip**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-v1.0.0.zip) |
+| 📱 **B. 安卓手机**（无需电脑） | [**ProxLock-Installer.apk**](https://github.com/Leenamgi20/ProxLock/releases/latest/download/ProxLock-Installer.apk) |
+
+### A. Windows 电脑（一键安装）
 
 1. **开启开发者模式**：手机上的 Meta Horizon 应用 → 设备 → 你的头显 → 头显设置 → 开发者模式
-2. 从 [Releases](../../releases) 下载 `ProxLock-vX.Y.Z.zip` 并解压。
+2. 从上表下载 **ProxLock-v1.0.0.zip** 并解压。
 3. 用 USB 数据线（需支持数据传输）把 Quest 连接到电脑。
 4. 双击 **`install.bat`**。
 5. 戴上头显，打开 **"允许 USB 调试吗？"** 通知（看不到时请打开通知面板），勾选 **"始终允许此计算机"** 并点击 **允许**。
 6. 请一直戴着头显，直到出现 ProxLock 窗口。安装程序显示 **完成！** 后即可拔掉数据线。
 
-## 安装（安卓手机，无需电脑）
+### B. 安卓手机（无需电脑）
 
 1. 开启 **开发者模式**（同上）。
-2. 在手机上从 [Releases](../../releases) 下载并打开 **`ProxLock-Installer.apk`**。
+2. 在手机上从上表下载并打开 **ProxLock-Installer.apk**。
    - 如果手机提示"未知来源应用"，请允许浏览器或文件应用安装。
    - 如果 Google Play 保护机制提示是未知应用，请点击 **更多详情 → 仍然安装**。
 3. 打开 **ProxLock Installer** 并选择语言。
