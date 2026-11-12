@@ -1,0 +1,95 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>NoSleep card - awake</title>
+<style>html,body{margin:0;background:#0d1020}body{width:1600px;height:900px;overflow:hidden;font-family:"Segoe UI",sans-serif}</style></head>
+<body>
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161b31"/><stop offset="1" stop-color="#0a0d18"/></linearGradient>
+    <linearGradient id="white" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfc"/><stop offset="1" stop-color="#cdd2da"/></linearGradient>
+    <linearGradient id="foam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f333d"/><stop offset="1" stop-color="#1b1e26"/></linearGradient>
+    <radialGradient id="skin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#f3cdb0"/><stop offset="1" stop-color="#dcab86"/></radialGradient>
+    <radialGradient id="lensOff" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#4a5470"/><stop offset=".6" stop-color="#161b28"/><stop offset="1" stop-color="#090b11"/></radialGradient>
+    <radialGradient id="lensOn" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#c8fbff"/><stop offset=".8" stop-color="#4fd8cf"/><stop offset="1" stop-color="#1c7f86"/></radialGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#c8fbff" stop-opacity=".75"/><stop offset=".45" stop-color="#5eead4" stop-opacity=".25"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".5"/></filter>
+
+    <!-- Person, front view (no headset) -->
+    <g id="person">
+      <path d="M-200 330 C -200 200, -120 150, -40 140 L 40 140 C 120 150, 200 200, 200 330 Z" fill="#2c3352"/>
+      <rect x="-38" y="90" width="76" height="70" fill="#d9a783"/>
+      <ellipse cx="-100" cy="-10" rx="18" ry="30" fill="#dcab86"/>
+      <ellipse cx="100" cy="-10" rx="18" ry="30" fill="#dcab86"/>
+      <ellipse cx="0" cy="-20" rx="98" ry="122" fill="url(#skin)"/>
+      <path d="M-100 -60 C -110 -170, 110 -170, 100 -60 C 80 -110, -80 -110, -100 -60 Z" fill="#2a2140"/>
+    </g>
+
+    <!-- Quest-2-like headset seen from the face side (white shell, black foam, two lenses, nose gap) -->
+    <g id="hmd">
+      <rect x="-170" y="-82" width="340" height="164" rx="70" fill="url(#white)"/>
+      <rect x="-152" y="-66" width="304" height="132" rx="58" fill="url(#foam)"/>
+      <path d="M-34 66 C -30 26, 30 26, 34 66 Z" fill="#11131a"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <line x1="800" y1="140" x2="800" y2="760" stroke="#2a3150" stroke-width="2" stroke-dasharray="4 10"/>
+
+  <!-- LEFT: headset pushed up on the forehead, display asleep -->
+  <g transform="translate(400 470)">
+    <use href="#person" filter="url(#shadow)"/>
+    <!-- eyes + flat mouth -->
+    <ellipse cx="-36" cy="2" rx="9" ry="10" fill="#2b1d17"/><ellipse cx="36" cy="2" rx="9" ry="10" fill="#2b1d17"/>
+    <path d="M-24 58 L 24 58" stroke="#8a4f38" stroke-width="6" stroke-linecap="round"/>
+    <!-- strap around the head -->
+    <path d="M-150 -110 C -150 -20, -112 -10, -100 -40" fill="none" stroke="#e3e6ec" stroke-width="18" stroke-linecap="round"/>
+    <path d="M150 -110 C 150 -20, 112 -10, 100 -40" fill="none" stroke="#e3e6ec" stroke-width="18" stroke-linecap="round"/>
+    <g transform="translate(0 -140)" filter="url(#shadow)">
+      <use href="#hmd"/>
+      <circle cx="-66" cy="-4" r="44" fill="url(#lensOff)" stroke="#0a0c12" stroke-width="5"/>
+      <circle cx="66" cy="-4" r="44" fill="url(#lensOff)" stroke="#0a0c12" stroke-width="5"/>
+    </g>
+    <!-- asleep -->
+    <g transform="translate(200 -300)">
+      <path d="M 0 -46 A 46 46 0 1 0 42 20 A 35 35 0 1 1 0 -46 Z" fill="#c7cde0"/>
+      <text x="56" y="-30" font-size="40" font-weight="800" fill="#8d96b5">z</text>
+      <text x="88" y="-64" font-size="30" font-weight="800" fill="#6e779a">z</text>
+    </g>
+    <g transform="translate(250 220)">
+      <circle r="42" fill="#3a1f2a" stroke="#fb7185" stroke-width="5"/>
+      <path d="M-15 -15 L15 15 M15 -15 L-15 15" stroke="#fb7185" stroke-width="9" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- RIGHT: same pose, display still on (lenses glowing) -->
+  <g transform="translate(1200 470)">
+    <use href="#person" filter="url(#shadow)"/>
+    <ellipse cx="-36" cy="2" rx="9" ry="10" fill="#2b1d17"/><ellipse cx="36" cy="2" rx="9" ry="10" fill="#2b1d17"/>
+    <path d="M-30 48 Q 0 76 30 48" fill="none" stroke="#8a4f38" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-150 -110 C -150 -20, -112 -10, -100 -40" fill="none" stroke="#e3e6ec" stroke-width="18" stroke-linecap="round"/>
+    <path d="M150 -110 C 150 -20, 112 -10, 100 -40" fill="none" stroke="#e3e6ec" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="-66" cy="-144" r="150" fill="url(#halo)"/><circle cx="-66" cy="-144" r="150" fill="url(#halo)"/>
+    <circle cx="66" cy="-144" r="150" fill="url(#halo)"/><circle cx="66" cy="-144" r="150" fill="url(#halo)"/>
+    <g transform="translate(0 -140)" filter="url(#shadow)">
+      <use href="#hmd"/>
+      <circle cx="-66" cy="-4" r="44" fill="url(#lensOn)" stroke="#0a0c12" stroke-width="5"/>
+      <circle cx="66" cy="-4" r="44" fill="url(#lensOn)" stroke="#0a0c12" stroke-width="5"/>
+    </g>
+    <!-- awake -->
+    <g transform="translate(230 -310)">
+      <circle r="28" fill="#fde68a"/>
+      <g stroke="#fde68a" stroke-width="8" stroke-linecap="round">
+        <line x1="0" y1="-44" x2="0" y2="-58"/><line x1="0" y1="44" x2="0" y2="58"/>
+        <line x1="-44" y1="0" x2="-58" y2="0"/><line x1="44" y1="0" x2="58" y2="0"/>
+        <line x1="31" y1="31" x2="41" y2="41"/><line x1="-31" y1="-31" x2="-41" y2="-41"/>
+        <line x1="31" y1="-31" x2="41" y2="-41"/><line x1="-31" y1="31" x2="-41" y2="41"/>
+      </g>
+    </g>
+    <g transform="translate(250 220)">
+      <circle r="42" fill="#123a37" stroke="#5eead4" stroke-width="5"/>
+      <path d="M-17 0 L-4 13 L19 -13" fill="none" stroke="#5eead4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <text x="800" y="862" text-anchor="middle" font-size="26" font-weight="600" fill="#5b6488">NoSleep for Quest</text>
+</svg>
+</body></html>
