@@ -1,5 +1,7 @@
 # NoSleep for Quest
 
+![用胶带遮住传感器 vs. NoSleep for Quest](docs/promo/card-tape.png)
+
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · **中文**
 
 让 Meta Quest 的距离传感器**永久保持禁用，重启后也不会恢复**，效果和用胶带遮住传感器一样：摘下头显后也不会进入休眠。

@@ -1,5 +1,7 @@
 # NoSleep for Quest
 
+![센서에 테이프 붙이기 vs. NoSleep for Quest](docs/promo/card-tape.png)
+
 [English](README.md) · **한국어** · [日本語](README.ja.md) · [中文](README.zh-CN.md)
 
 Meta Quest의 근접 센서를 **재부팅해도 계속 꺼진 상태로 유지**해 주는 앱입니다. 센서를 테이프로 막은 것과 같은 효과로, 헤드셋을 벗어도 대기모드로 넘어가지 않습니다.

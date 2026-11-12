@@ -1,5 +1,7 @@
 # NoSleep for Quest
 
+![センサーにテープ vs. NoSleep for Quest](docs/promo/card-tape.png)
+
 [English](README.md) · [한국어](README.ko.md) · **日本語** · [中文](README.zh-CN.md)
 
 Meta Quest の近接センサーを**再起動後も無効のまま維持**するアプリです。センサーをテープでふさいだのと同じ効果で、ヘッドセットを外してもスリープしなくなります。

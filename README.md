@@ -1,5 +1,7 @@
 # NoSleep for Quest
 
+![Tape over the sensor vs. NoSleep for Quest](docs/promo/card-tape.png)
+
 **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [中文](README.zh-CN.md)
 
 Keeps the Meta Quest proximity sensor **disabled permanently, even after reboots**, just like covering the sensor with tape. The headset no longer goes to sleep when you take it off.
